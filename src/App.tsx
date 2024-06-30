@@ -3,13 +3,14 @@ import './App.css';
 import Header from './components/Header';
 import UserList from './components/UserList';
 import UserFilter from './hooks/UserFilter';
+import Filters from './components/Filters';
 
 
 
 // https://dummyjson.com/users
 
 function App() {
-	const { users, filteredUsers } = UserFilter();
+	const { users, filteredUsers, nameFilter, setNameFilter} = UserFilter();
 	return (
 		<>
 			<div>
@@ -19,6 +20,10 @@ function App() {
 			</div>
 			<div className="home-card">
 				 <Header />
+				 <Filters
+				 nameFilter={nameFilter}
+				 setNameFilter={setNameFilter}
+			   />
 				 <UserList filteredUsers={filteredUsers} />
 			</div>
 		</>

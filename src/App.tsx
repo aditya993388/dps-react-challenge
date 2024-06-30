@@ -2,11 +2,14 @@ import dpsLogo from './assets/DPS.svg';
 import './App.css';
 import Header from './components/Header';
 import UserList from './components/UserList';
+import UserFilter from './hooks/UserFilter';
+
 
 
 // https://dummyjson.com/users
 
 function App() {
+	const { users, filteredUsers } = UserFilter();
 	return (
 		<>
 			<div>
@@ -16,7 +19,7 @@ function App() {
 			</div>
 			<div className="home-card">
 				 <Header />
-				 <UserList />
+				 <UserList filteredUsers={filteredUsers} />
 			</div>
 		</>
 	);

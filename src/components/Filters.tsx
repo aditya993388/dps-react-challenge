@@ -1,14 +1,23 @@
 import React from 'react';
 
 interface FiltersProps {
-  nameFilter: string;
-  setNameFilter: (value: string) => void;
+    nameFilter: string;
+    cityFilter: string;
+    highlightOldest: boolean;
+    setNameFilter: (value: string) => void;
+    setCityFilter: (value: string) => void;
+    setHighlightOldest: (value: boolean) => void;
+    cities: string[];
+  }
   
-}
-
-function Filters({
+  function Filters({
     nameFilter,
+    cityFilter,
+   highlightOldest,
     setNameFilter,
+    setCityFilter,
+    setHighlightOldest,
+    cities
   }: FiltersProps) {
     return (
       <div className="filters">
@@ -23,7 +32,31 @@ function Filters({
             placeholder="Enter name"
           />
         </div>
-
+        <div className="filter-group">
+          <label htmlFor="cityFilter" className="filter-label">Filter by City:</label>
+          <select
+            id="cityFilter"
+            value={cityFilter}
+            onChange={(e) => setCityFilter(e.target.value)}
+            className="filter-input"
+          >
+            <option value="">All Cities</option>
+            {cities.map(city => (
+              <option key={city} value={city}>{city}</option>
+            ))}
+          </select>
+        </div>
+        <div className="filter-group checkbox-group">
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={highlightOldest}
+              onChange={(e) => setHighlightOldest(e.target.checked)}
+              className="checkbox-input"
+            />
+            Highlight Oldest
+          </label>
+        </div>
       </div>
     );
   }

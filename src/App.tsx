@@ -10,7 +10,7 @@ import Filters from './components/Filters';
 // https://dummyjson.com/users
 
 function App() {
-	const { users, filteredUsers, nameFilter, setNameFilter} = UserFilter();
+	const { users, filteredUsers, nameFilter, setNameFilter, cityFilter, setCityFilter, highlightOldest, setHighlightOldest, cities } = UserFilter();
 	return (
 		<>
 			<div>
@@ -22,7 +22,12 @@ function App() {
 				 <Header />
 				 <Filters
 				 nameFilter={nameFilter}
+				 cityFilter={cityFilter}
+				 highlightOldest={highlightOldest}
 				 setNameFilter={setNameFilter}
+				 setCityFilter={setCityFilter}
+				 setHighlightOldest={setHighlightOldest}
+				 cities={cities}
 			   />
 				 <UserList filteredUsers={filteredUsers} />
 			</div>

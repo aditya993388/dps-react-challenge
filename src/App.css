@@ -6,19 +6,18 @@
 }
 
 .App-header {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
   }
   
   .customer-list-header {
 	background-color: #4a90e2;
 	color: #fff;
 	padding: 1.5rem;
-	border-radius: 12px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	font-size: 1.5rem;
 	font-weight: bold;
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
   }
 
 
@@ -54,8 +53,6 @@
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  
-  
   .user-info {
 	display: flex;
 	justify-content: space-between;
@@ -124,7 +121,7 @@
 	padding: 1.5rem;
 	border-radius: 12px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
   }
 
   .filter-group {
@@ -147,4 +144,23 @@
 	color: #333;
 	font-size: 1rem;
 	width: 200px;
+  }
+
+   
+  .checkbox-group {
+	display: flex;
+	align-items: center;
+  }
+  
+  .checkbox-label {
+	font-size: 1.2rem;
+	color: #333;
+  }
+  
+  .checkbox-input {
+	margin-right: 0.5rem;
+  }
+
+  .user-list li.oldest {
+	background-color: #ffe082; 
   }

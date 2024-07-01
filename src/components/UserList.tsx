@@ -18,7 +18,7 @@ function UserList({ filteredUsers }: UserListProps) {
             <h3>City</h3>
           </div>
           <div className="info-group">
-            <h3>Birth Date</h3>
+            <h3>Birthday</h3>
           </div>
         </div>
       )}
